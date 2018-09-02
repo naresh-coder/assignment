@@ -112,9 +112,8 @@ public class Cache {
 	public  Map<String,Object> findAll(){
 		Map<String,Object> copy = new HashMap<>();
 		synchronized (cacheMap) {
-			for (String key : cacheMap.keySet()) {
-				Object object = this.get(key);
-				copy.put(key,object);
+			for (Map.Entry<String, Object> entry : cacheMap.entrySet()) {
+				copy.put(entry.getKey(), entry.getValue());
 			}
 		}
 		return  copy;
