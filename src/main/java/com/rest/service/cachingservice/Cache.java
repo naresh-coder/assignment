@@ -14,7 +14,7 @@ import java.util.Set;
 @Component
 public class Cache {
 	private Map<String,Object>  cacheMap;
-
+         //TODO: replace with boolean with volatile boolean value
 	private volatile Set<String> lockedKeys = new HashSet<>();
 	private volatile Set<String> removedLocks = new HashSet<>();
 
